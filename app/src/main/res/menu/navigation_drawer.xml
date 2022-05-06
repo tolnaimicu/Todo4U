@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/data">
+        <item
+            android:id="@+id/menu_myTodos"
+            android:icon="@drawable/fui_ic_check_circle_black_128dp"
+            android:title="@string/my_todos" />
+        <item
+            android:id="@+id/menu_Settings"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="@string/settings" />
+        <item
+            android:id="@+id/menu_myBoards"
+            android:icon="?attr/actionModePasteDrawable"
+            android:title="@string/my_boards" />
+        <item
+            android:id="@+id/menu_friends"
+            android:icon="@android:drawable/ic_menu_my_calendar"
+            android:title="@string/friends" />
+
+    </group>
+
+</menu>

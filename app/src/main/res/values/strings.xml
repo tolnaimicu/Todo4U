@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Todo4U</string>
     <string name="web_client_id">43971626253-7sqid2njst58ogjtk7dura9n45516jbs.apps.googleusercontent.com</string>
+    <string name="my_todos">My Todos</string>
+    <string name="friends">Friends</string>
+    <string name="settings">Settings</string>
+    <string name="my_boards">My Boards</string>
 </resources>
