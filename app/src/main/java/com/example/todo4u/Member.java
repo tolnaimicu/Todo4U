@@ -1,8 +1,12 @@
 package com.example.todo4u;
 
 public class Member {
-    private String memberId;
-    private String nickName;
+    public String memberId;
+    public String nickName;
+
+    public Member(){
+
+    }
 
     public Member(String memberId, String nickName)
     {
@@ -10,5 +14,19 @@ public class Member {
         this.nickName = nickName;
     }
 
+    public String getMemberId() {
+        return memberId;
+    }
 
+    public void setMemberId(String memberId) {
+        this.memberId = memberId;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
 }
