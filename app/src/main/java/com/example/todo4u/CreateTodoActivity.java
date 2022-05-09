@@ -14,6 +14,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -21,6 +24,7 @@ public class CreateTodoActivity extends AppCompatActivity {
 
     private Button mDisplayDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
+
     Button timeButton;
     int hour, minute;
 
@@ -48,7 +52,6 @@ public class CreateTodoActivity extends AppCompatActivity {
         createTodoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Implement creation
             }
         });
 
