@@ -10,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Todo4U">
         <activity android:name=".MainActivity"/>
-        <activity android:name=".LogInActivity"/>
+        <activity android:name=".CreateTodoActivity"/>
         <activity
-            android:name=".CreateTodoActivity"
+            android:name=".LogInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

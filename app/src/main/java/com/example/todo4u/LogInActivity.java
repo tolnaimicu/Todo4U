@@ -41,7 +41,6 @@ public class LogInActivity extends AppCompatActivity {
        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             if (user != null) {
                 goToMainActivity();
-                Log.d(TAG, "XXXX UserID: " + user.getTenantId());
             }
 
     }

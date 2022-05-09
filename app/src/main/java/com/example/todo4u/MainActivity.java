@@ -23,13 +23,13 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    private ReadAndWriteSnippets readAndWriteSnippets;
+    private DatabaseReference mDatabase = FirebaseDatabase.getInstance("https://todo4u-16517-default-rtdb.europe-west1.firebasedatabase.app/").getReference();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         checkCurrentUser();
-        basicReadWrite();
         setContentView(R.layout.activity_main);
     }
 
@@ -37,12 +37,12 @@ public class MainActivity extends AppCompatActivity {
     public void checkCurrentUser() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
-            Toast.makeText(this, "Hello " + user.getTenantId(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Hello " + user.getDisplayName(), Toast.LENGTH_SHORT).show();
+            writeNewMemberToDatabase();
         } else {
-           startLoginActivity();
+            startLoginActivity();
         }
     }
-
 
 
     private void startLoginActivity() {
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    public void signOut(View w){
+    public void signOut(View w) {
         AuthUI.getInstance().signOut(this)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -61,32 +61,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // DATABASE ----
-   public void basicReadWrite() {
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
+    public void writeNewMemberToDatabase() {
 
-        myRef.setValue("Hello, World!" +
-                "My name is Milan");
+       String userId = FirebaseAuth.getInstance().getCurrentUser().getTenantId();
+       String name = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
 
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                String value = dataSnapshot.getValue(String.class);
-                Log.d(TAG, "Value is: " + value);
-                Toast.makeText(MainActivity.this, "The value is: "+ value, Toast.LENGTH_SHORT).show();
-            }
+        mDatabase
+                .child("member")
+                .child(userId)
+                .setValue(name)
+                .addOnSuccessListener(aVoid -> {Log.d(TAG, "Successful ");
 
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException());
-            }
-        });
+                })
+                .addOnFailureListener(e -> Log.w(TAG, e.getMessage()));
     }
+
 
 
 }
