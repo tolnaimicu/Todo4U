@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Todo4U</string>
     <string name="web_client_id">43971626253-7sqid2njst58ogjtk7dura9n45516jbs.apps.googleusercontent.com</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
 </resources>
