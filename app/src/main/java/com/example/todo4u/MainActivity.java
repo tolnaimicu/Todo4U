@@ -38,26 +38,35 @@ import com.google.firebase.auth.PlayGamesAuthProvider;
 import com.google.firebase.auth.SignInMethodQueryResult;
 import com.google.firebase.auth.UserInfo;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "MainActivity";
+    private ReadAndWriteSnippets readAndWriteSnippets;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         checkCurrentUser();
+        basicReadWrite();
         setContentView(R.layout.activity_main);
     }
 
+    // LOG IN, LOG OUT ----
     public void checkCurrentUser() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
-            Toast.makeText(this, "Hello " + user.getDisplayName(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Hello " + user.getTenantId(), Toast.LENGTH_SHORT).show();
         } else {
-            startLoginActivity();
+           startLoginActivity();
         }
     }
 
@@ -79,6 +88,32 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    // DATABASE ----
+   public void basicReadWrite() {
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("message");
+
+        myRef.setValue("Hello, World!" +
+                "My name is Milan");
+
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                String value = dataSnapshot.getValue(String.class);
+                Log.d(TAG, "Value is: " + value);
+                Toast.makeText(MainActivity.this, "The value is: "+ value, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+    }
 
 
 }
