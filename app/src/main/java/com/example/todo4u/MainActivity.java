@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private ReadAndWriteSnippets readAndWriteSnippets;
+    private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         checkCurrentUser();
         basicReadWrite();
         setContentView(R.layout.activity_main);
+        writeNewUserWithTaskListeners();
     }
 
     // LOG IN, LOG OUT ----
@@ -41,6 +43,21 @@ public class MainActivity extends AppCompatActivity {
         } else {
            startLoginActivity();
         }
+    }
+
+    public void writeNewUserWithTaskListeners() {
+
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getTenantId();
+        String name = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
+        //Member member = new Member(name, userId);
+
+
+        mDatabase.child("members").child(userId);
+        mDatabase.child("members").child(userId).setValue(name)
+                .addOnSuccessListener(aVoid -> {Log.d(TAG, "Successful ");
+
+                })
+                .addOnFailureListener(e -> Log.w(TAG, e.getMessage()));
     }
 
 
