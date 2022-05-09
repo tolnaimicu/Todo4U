@@ -11,7 +11,7 @@
         android:theme="@style/Theme.Todo4U">
         <activity android:name=".MainActivity"/>
         <activity
-            android:name=".CreateTodoActivity"
+            android:name=".LogInIntent"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

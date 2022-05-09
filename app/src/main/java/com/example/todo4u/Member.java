@@ -9,4 +9,6 @@ public class Member {
         this.memberId = memberId;
         this.nickName = nickName;
     }
+
+
 }

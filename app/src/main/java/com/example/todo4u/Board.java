@@ -6,12 +6,14 @@ public class Board {
     private String boardName;
     private String boardDescription;
     private ArrayList<Todo> todos;
+    private Member owner;
 
-    public Board(String boardName, String boardDescription)
+    public Board(String boardName, String boardDescription, Member member)
     {
         this.boardDescription=boardDescription;
         this.boardName=boardName;
         todos = new ArrayList<>();
+        owner = member;
     }
 
     public void addTodoToBoard(Todo todo)
