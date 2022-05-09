@@ -17,9 +17,9 @@ import com.google.firebase.auth.FirebaseUser;
 import java.util.Arrays;
 import java.util.List;
 
-public class LogInIntent extends AppCompatActivity {
+public class LogInActivity extends AppCompatActivity {
 
-    private static final String TAG = "LogInIntent";
+    private static final String TAG = "LogInActivity";
 
     ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(), result -> {
