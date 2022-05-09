@@ -16,4 +16,6 @@
     <string name="action_logout">Log out</string>
     <string name="welcome_message">welcomeMessage</string>
     <string name="your_nickname">Your nickname</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

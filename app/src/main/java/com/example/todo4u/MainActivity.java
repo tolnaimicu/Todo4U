@@ -27,6 +27,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     NavController navController;
+    AppBarConfiguration appBarConfiguration;
     DrawerLayout drawerLayout;
     NavigationView navigationDrawer;
     BottomNavigationView bottomNavigationView;
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationDrawer = findViewById(R.id.navigation_drawer);
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
-        toolbar = findViewById(R.id.my_toolbar);
+        toolbar = findViewById(R.id.toolbar);
     }
 
     private void setupNavigation() {
