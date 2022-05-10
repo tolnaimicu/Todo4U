@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void writeNewMemberToDatabase() {
 
-       String userId = FirebaseAuth.getInstance().getCurrentUser().getTenantId();
+       String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
        String name = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
 
         mDatabase
