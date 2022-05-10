@@ -54,7 +54,7 @@ public class CreateBoardFragment extends Fragment {
 
                 mDatabase
                         .child("board")
-                        .child(usedId)
+                        .child(title)
                         .setValue(board)
                         .addOnSuccessListener(aVoid -> {Log.d(TAG, "Successfully added to the database ");
 
