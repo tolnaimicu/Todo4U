@@ -2,12 +2,11 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigation.xml"
-    app:startDestination="@+id/fragment_blank">
+    app:startDestination="@+id/fragment_create_board">
 
     <fragment
-        android:id="@+id/fragment_blank"
-        android:name="com.example.todo4u.BlankFragment"
-        android:label="@string/hello_blank_fragment"/>
-
+        android:id="@+id/fragment_create_board"
+        android:name="com.example.todo4u.CreateBoardFragment"
+        android:label="@string/create_board"/>
 
 </navigation>

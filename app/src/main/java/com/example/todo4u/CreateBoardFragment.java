@@ -47,7 +47,7 @@ public class CreateBoardFragment extends Fragment {
             public void onClick(View view) {
                 String title = boardTitle.getText().toString();
                 String description = boardDescription.getText().toString();
-                String usedId = FirebaseAuth.getInstance().getCurrentUser().getTenantId();
+                String usedId = FirebaseAuth.getInstance().getCurrentUser().getUid();
                 String userName = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
 
                 Board board = new Board(title, description, new Member(usedId, userName));
