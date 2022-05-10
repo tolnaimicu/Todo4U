@@ -22,6 +22,14 @@
         <entry key="app/src/main/res/menu/bottom_nav.xml" value="0.1" />
         <entry key="app/src/main/res/menu/menu_header.xml" value="0.23420867919921873" />
         <entry key="app/src/main/res/menu/navigation_drawer.xml" value="0.3098958333333333" />
+        <entry key="..\:/Users/Kira/AndroidStudioProjects/Todo4U/app/src/main/res/layout/activity_create_todo.xml" value="0.4" />
+        <entry key="..\:/Users/Tolnai/AndroidStudioProjects/Todo4U/app/src/main/res/layout/activity_dashboard.xml" value="0.4" />
+        <entry key="..\:/Users/Tolnai/AndroidStudioProjects/Todo4U/app/src/main/res/layout/activity_dashvoard.xml" value="0.1" />
+        <entry key="..\:/Users/Tolnai/AndroidStudioProjects/Todo4U/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/Tolnai/AndroidStudioProjects/Todo4U/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/Users/Tolnai/AndroidStudioProjects/Todo4U/app/src/main/res/layout/activity_registration.xml" value="0.152" />
+        <entry key="..\:/Users/Tolnai/AndroidStudioProjects/Todo4U/app/src/main/res/layout/signin_activity.xml" value="0.2" />
+        <entry key="..\:/Users/Tolnai/AndroidStudioProjects/Todo4U/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1275" />
       </map>
     </option>
   </component>
