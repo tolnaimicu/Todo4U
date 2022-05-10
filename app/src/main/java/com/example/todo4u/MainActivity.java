@@ -11,10 +11,10 @@ import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
@@ -103,7 +103,8 @@ public class MainActivity extends AppCompatActivity {
                 .child("member")
                 .child(userId)
                 .setValue(name)
-                .addOnSuccessListener(aVoid -> {Log.d(TAG, "Successfully added to the database ");
+                .addOnSuccessListener(aVoid -> {
+                    Log.d(TAG, "Successfully added to the database ");
 
                 })
                 .addOnFailureListener(e -> Log.w(TAG, "Cannot add member to the database"));
