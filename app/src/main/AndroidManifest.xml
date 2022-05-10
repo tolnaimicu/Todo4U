@@ -18,11 +18,9 @@
             </intent-filter>
 
         </activity>
+
         <activity
-            android:name=".CreateTodoActivity">
-        </activity>
-        <activity
-            android:name=".LogInIntent">
+            android:name=".LogInActivity">
         </activity>
     </application>
 
