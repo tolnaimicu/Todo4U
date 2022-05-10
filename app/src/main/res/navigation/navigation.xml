@@ -5,8 +5,18 @@
     app:startDestination="@+id/fragment_create_board">
 
     <fragment
+        android:id="@+id/fragment_create_todo"
+        android:name="com.example.todo4u.CreateTodoFragment"
+        android:label="@string/create_todo"/>
+
+    <fragment
         android:id="@+id/fragment_create_board"
         android:name="com.example.todo4u.CreateBoardFragment"
         android:label="@string/create_board"/>
+
+    <fragment
+        android:id="@+id/fragment_blank"
+        android:name="com.example.todo4u.BlankFragment"
+        android:label="@string/hello_blank_fragment"/>
 
 </navigation>
