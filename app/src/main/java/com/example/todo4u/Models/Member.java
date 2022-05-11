@@ -1,4 +1,4 @@
-package com.example.todo4u;
+package com.example.todo4u.Models;
 
 public class Member {
     public String memberId;

@@ -1,4 +1,8 @@
-package com.example.todo4u;
+package com.example.todo4u.Models;
+
+import com.example.todo4u.Models.Board;
+import com.example.todo4u.Models.Member;
+import com.example.todo4u.Models.Reminder;
 
 import java.util.Date;
 

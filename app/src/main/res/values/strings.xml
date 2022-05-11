@@ -20,6 +20,6 @@
     <string name="sign_in">SIGN IN</string>
     <string name="sign_up">SIGN UP</string>
     <string name="create_board">Create board</string>
-    <string name="description">Description</string>
     <string name="board_title">Board title</string>
+    <string name="description">Description</string>
 </resources>
