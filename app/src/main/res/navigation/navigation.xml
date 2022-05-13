@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/menu_myBoards"
-        android:name="com.example.todo4u.myBoardsFragment"
+        android:name="com.example.todo4u.Fragments.BoardsFragment"
         android:label="@string/my_boards"/>
 
 </navigation>

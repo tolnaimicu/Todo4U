@@ -1,4 +1,4 @@
-package com.example.todo4u;
+package com.example.todo4u.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.todo4u.Models.Board;
+import com.example.todo4u.Models.Member;
+import com.example.todo4u.R;
+
 import java.util.ArrayList;
 
 public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.ViewHolder> {
@@ -15,7 +19,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.ViewHolder> 
     private ArrayList<Board> boards;
     private OnClickListener listener;
 
-    BoardAdapter(){
+    public BoardAdapter(){
         /// TODO: 13.05.2022 get boards out of database
         boards = new ArrayList<>();
         boards.add(new Board("board1", "description1",

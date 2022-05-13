@@ -1,4 +1,4 @@
-package com.example.todo4u;
+package com.example.todo4u.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,13 +12,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-public class myBoardsFragment extends Fragment {
+import com.example.todo4u.Adapters.BoardAdapter;
+import com.example.todo4u.R;
+
+import com.example.todo4u.Adapters.BoardAdapter;
+
+public class BoardsFragment extends Fragment {
 
     RecyclerView boardsList;
     BoardAdapter boardAdapter;
     Context context;
 
-    public myBoardsFragment() {
+    public BoardsFragment() {
         // Required empty public constructor
     }
 
