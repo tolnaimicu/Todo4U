@@ -25,4 +25,7 @@
     <string name="board_description">Description</string>
     <string name="board_name">Board name</string>
     <string name="board_owner">Owner</string>
+    <string name="todo_name">Todo Name</string>
+    <string name="todo_deadline">Deadline</string>
+    <string name="todo_description">Description</string>
 </resources>

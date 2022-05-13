@@ -25,13 +25,12 @@ public class Todo {
         this.board=board;
         this.member = member;
 
-        board.addTodoToBoard(this);
+        //board.addTodoToBoard(this);
     }
 
     public Todo(){
 
     }
-
 
     public int getTodoId() {
         return todoId;

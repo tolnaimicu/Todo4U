@@ -12,16 +12,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.todo4u.Adapters.BoardAdapter;
+import com.example.todo4u.Adapters.TodoAdapter;
 import com.example.todo4u.R;
 
-public class BoardsFragment extends Fragment {
+public class TodosFragment extends Fragment {
 
-    RecyclerView boardsList;
-    BoardAdapter boardAdapter;
+    RecyclerView todosList;
+    TodoAdapter todoAdapter;
     Context context;
 
-    public BoardsFragment() {
+    public TodosFragment() {
         // Required empty public constructor
     }
 
@@ -34,16 +34,16 @@ public class BoardsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         context = container.getContext();
-        View view = inflater.inflate(R.layout.fragment_boards, container, false);
-        boardsList = view.findViewById(R.id.recyclerViewBoard);
-        boardsList.hasFixedSize();
-        boardsList.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        View view = inflater.inflate(R.layout.fragment_todos, container, false);
+        todosList = view.findViewById(R.id.recyclerViewTodos);
+        todosList.hasFixedSize();
+        todosList.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
-        boardAdapter = new BoardAdapter();
-        boardsList.setAdapter(boardAdapter);
+        todoAdapter = new TodoAdapter();
+        todosList.setAdapter(todoAdapter);
 
-        boardAdapter.setOnClickListener(board -> {
-            Toast.makeText(context, board.getBoardName(), Toast.LENGTH_SHORT).show();
+        todoAdapter.setOnClickListener(todo -> {
+            Toast.makeText(context, todo.getTitle(), Toast.LENGTH_SHORT).show();
         });
 
         return view;
