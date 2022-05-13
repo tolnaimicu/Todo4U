@@ -8,11 +8,6 @@ public class Board {
     public ArrayList<Todo> todos;
     public Member owner;
 
-public Board()
-{
-
-}
-
     public Board(String boardName, String boardDescription, Member member)
     {
         this.boardDescription=boardDescription;
