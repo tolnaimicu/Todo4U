@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigation.xml"
-    app:startDestination="@+id/fragment_create_todo">
+    app:startDestination="@+id/fragment_create_board">
 
     <fragment
         android:id="@+id/fragment_create_todo"
@@ -24,5 +24,15 @@
         android:id="@+id/fragment_settings"
         android:name="com.example.todo4u.Fragments.SettingsFragment"
         android:label="@string/settings"/>
+
+    <fragment
+        android:id="@+id/menu_myBoards"
+        android:name="com.example.todo4u.Fragments.BoardsFragment"
+        android:label="@string/my_boards"/>
+
+    <fragment
+        android:id="@+id/menu_myTodos"
+        android:name="com.example.todo4u.Fragments.TodosFragment"
+        android:label="@string/my_todos"/>
 
 </navigation>

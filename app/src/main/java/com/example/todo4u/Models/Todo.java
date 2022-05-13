@@ -17,6 +17,7 @@ public class Todo {
 
     public Todo( String title, GregorianCalendar deadline, String description, Reminder reminder, Board board, Member member)
     {
+        this.todoId=todoId;
         this.title=title;
         this.deadline=deadline;
         this.description=description;
