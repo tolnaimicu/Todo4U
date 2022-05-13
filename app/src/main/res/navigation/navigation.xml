@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigation.xml"
-    app:startDestination="@+id/fragment_create_board">
+    app:startDestination="@+id/fragment_create_todo">
 
     <fragment
         android:id="@+id/fragment_create_todo"
-        android:name="com.example.todo4u.CreateTodoFragment"
-        android:label="@string/create_todo"/>
+        android:name="com.example.todo4u.Fragments.CreateTodoFragment"
+        class="@string/create_todo"/>
 
     <fragment
         android:id="@+id/fragment_create_board"
@@ -16,7 +17,12 @@
 
     <fragment
         android:id="@+id/fragment_blank"
-        android:name="com.example.todo4u.BlankFragment"
+        android:name="com.example.todo4u.Fragments.BlankFragment"
         android:label="@string/hello_blank_fragment"/>
+
+    <fragment
+        android:id="@+id/fragment_settings"
+        android:name="com.example.todo4u.Fragments.SettingsFragment"
+        android:label="@string/settings"/>
 
 </navigation>

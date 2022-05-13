@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Reminder {
 
-    private String type;
+    public String type;
 
     public Reminder(String type)
     {

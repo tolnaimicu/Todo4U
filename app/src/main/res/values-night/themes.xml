@@ -2,13 +2,13 @@
     <!-- Base application theme. -->
     <style name="Theme.Todo4U" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/dark_pink</item>
-        <item name="colorPrimaryVariant">@color/dark_red</item>
+        <item name="colorPrimary">#531D2F</item>
+        <item name="colorPrimaryVariant">@color/dark_pink</item>
         <item name="colorOnPrimary">@color/beige</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/dark_brown</item>
+        <item name="colorSecondary">@color/beige</item>
         <item name="colorSecondaryVariant">@color/dark_brown</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/beige</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->

@@ -3,10 +3,10 @@ package com.example.todo4u.Models;
 import java.util.ArrayList;
 
 public class Board {
-    public String boardName;
+    public Member owner;
     public String boardDescription;
     public ArrayList<Todo> todos;
-    public Member owner;
+    public String boardName;
 
 public Board()
 {
@@ -35,10 +35,6 @@ public Board()
         todos.remove(todoId);
     }
 
-    public int getTodoCount()
-    {
-        return todos.size();
-    }
 
 
     public String getBoardName() {

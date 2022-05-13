@@ -5,19 +5,18 @@ import com.example.todo4u.Models.Member;
 import com.example.todo4u.Models.Reminder;
 
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Todo {
-    private int todoId;
-    private String title;
-    private Date deadline;
-    private String description;
-    private Reminder reminder;
-    private Board board;
-    private Member member;
+    public String title;
+    public GregorianCalendar deadline;
+    public String description;
+    public Reminder reminder;
+    public Board board;
+    public Member member;
 
-    public Todo(int todoId, String title, Date deadline, String description, Reminder reminder, Board board, Member member)
+    public Todo( String title, GregorianCalendar deadline, String description, Reminder reminder, Board board, Member member)
     {
-        this.todoId=todoId;
         this.title=title;
         this.deadline=deadline;
         this.description=description;
@@ -25,7 +24,6 @@ public class Todo {
         this.board=board;
         this.member = member;
 
-        board.addTodoToBoard(this);
     }
 
     public Todo(){
@@ -33,13 +31,6 @@ public class Todo {
     }
 
 
-    public int getTodoId() {
-        return todoId;
-    }
-
-    public void setTodoId(int todoId) {
-        this.todoId = todoId;
-    }
 
     public String getTitle() {
         return title;
@@ -49,11 +40,11 @@ public class Todo {
         this.title = title;
     }
 
-    public Date getDeadline() {
+    public GregorianCalendar getDeadline() {
         return deadline;
     }
 
-    public void setDeadline(Date deadline) {
+    public void setDeadline(GregorianCalendar deadline) {
         this.deadline = deadline;
     }
 

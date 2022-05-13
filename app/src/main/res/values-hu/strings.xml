@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Todo4U</string>
+    <string name="web_client_id">43971626253-7sqid2njst58ogjtk7dura9n45516jbs.apps.googleusercontent.com</string>
+    <string name="create_todo">Todo létrehozása</string>
+    <string name="todo_title">Todo neve</string>
+    <string name="date">Dátum</string>
+    <string name="time">Idő</string>
+    <string name="select_deadline">Határidő kiválasztása:</string>
+    <string name="select_board">Tábla kiválasztása</string>
+    <string name="select_member">Felelős kiválasztása</string>
+    <string name="select_reminder">Emlékeztető kiválasztása</string>
+    <string name="my_todos">Az én Todoim</string>
+    <string name="friends">Barátok</string>
+    <string name="my_boards">AZ én tábláim</string>
+    <string name="action_logout">Kijelentkezés</string>
+    <string name="welcome_message">Üdvözlés</string>
+    <string name="your_nickname">A beceneved</string>
+    <string name="hello_blank_fragment">Szia üres fragment</string>
+    <string name="sign_in">Bejelentkezés</string>
+    <string name="sign_up">Feliratkozás</string>
+    <string name="create_board">Tábla létrehozása</string>
+    <string name="board_title">Tábla címe</string>
+    <string name="description">Leírás</string>
+    <string name="change_theme">Téma megváltoztatása</string>
+    <string name="night_mode">Éjszakai beállítás</string>
+    <string name="settings">Beállítások</string>
+    <string name="language_settings">Nyelvi beállítások</string>
+    <string name="magyar">Magyar</string>
+    <string name="english">Angol</string>
+</resources>

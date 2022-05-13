@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.todo4u.Models.Board;
 import com.example.todo4u.Models.Member;
+import com.example.todo4u.Models.Todo;
 import com.example.todo4u.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -71,8 +72,7 @@ public class CreateBoardFragment extends Fragment {
                 Board board = new Board(title, description, new Member(usedId, userName));
 
                 databaseReference
-                        .child("board")
-                        .child(title)
+                        .child("board").child(usedId).child(title)
                         .setValue(board)
                         .addOnSuccessListener(aVoid -> {Log.d(TAG, "Successfully added to the database ");
 
