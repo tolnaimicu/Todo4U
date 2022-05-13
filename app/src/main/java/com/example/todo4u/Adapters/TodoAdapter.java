@@ -16,6 +16,7 @@ import com.example.todo4u.R;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.ViewHolder> {
 
@@ -24,22 +25,22 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.ViewHolder> {
 
     public TodoAdapter(){
         todos = new ArrayList<>();
-        todos.add(new Todo(1, "title1", new Date(1,1,1), "description",
+        todos.add(new Todo( "title1", new GregorianCalendar(1,1,1), "description",
                 new Reminder("now"), new Board("board", "des",
                 new Member("id", "hello")), new Member("id", "hello")));
-        todos.add(new Todo(1, "title1", new Date(1,1,1), "description",
-                new Reminder("now"), new Board("board", "des",
-                new Member("id", "hello")), new Member("id", "hello")));
-
-        todos.add(new Todo(1, "title1", new Date(1,1,1), "description",
+        todos.add(new Todo( "title1", new GregorianCalendar(1,1,1), "description",
                 new Reminder("now"), new Board("board", "des",
                 new Member("id", "hello")), new Member("id", "hello")));
 
-        todos.add(new Todo(1, "title1", new Date(1,1,1), "description",
+        todos.add(new Todo( "title1", new GregorianCalendar(1,1,1), "description",
                 new Reminder("now"), new Board("board", "des",
                 new Member("id", "hello")), new Member("id", "hello")));
 
-        todos.add(new Todo(1, "title1", new Date(1,1,1), "description",
+        todos.add(new Todo( "title1", new GregorianCalendar(1,1,1), "description",
+                new Reminder("now"), new Board("board", "des",
+                new Member("id", "hello")), new Member("id", "hello")));
+
+        todos.add(new Todo( "title1", new GregorianCalendar(1,1,1), "description",
                 new Reminder("now"), new Board("board", "des",
                 new Member("id", "hello")), new Member("id", "hello")));
 
