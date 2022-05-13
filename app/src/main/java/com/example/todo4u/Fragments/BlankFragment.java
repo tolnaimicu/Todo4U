@@ -1,4 +1,4 @@
-package com.example.todo4u;
+package com.example.todo4u.Fragments;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.todo4u.R;
 
 public class BlankFragment extends Fragment {
 

@@ -11,7 +11,7 @@
 
     <fragment
         android:id="@+id/fragment_create_board"
-        android:name="com.example.todo4u.CreateBoardFragment"
+        android:name="com.example.todo4u.Fragments.CreateBoardFragment"
         android:label="@string/create_board"/>
 
     <fragment

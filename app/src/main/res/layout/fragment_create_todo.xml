@@ -32,13 +32,27 @@
             android:layout_marginTop="20dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/todo_title"
+            android:hint="@string/todo_title"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/create_todo"
             app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/todo_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/description"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/todo_title" />
 
         <TextView
             android:id="@+id/textView2"
@@ -50,7 +64,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/todo_title" />
+            app:layout_constraintTop_toBottomOf="@+id/todo_description"/>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/linearLayoutCompat"
