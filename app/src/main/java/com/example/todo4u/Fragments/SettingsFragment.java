@@ -53,7 +53,6 @@ public class SettingsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
         user = FirebaseAuth.getInstance().getCurrentUser();
-        View view2 = inflater.inflate(R.layout.activity_main, container, false);
 
         deleteAccount = view.findViewById(R.id.delete_profile_button);
 
@@ -61,7 +60,6 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 deleteAccount();
-                AuthUI.getInstance().signOut(view2.getContext());
 
             }
         });
@@ -99,6 +97,7 @@ public class SettingsFragment extends Fragment {
            public void onComplete(@NonNull Task<Void> task) {
                if (task.isSuccessful()) {
                    Log.d("Settings", "User account deleted.");
+                   Toast.makeText(context, "USer successfully deleted", Toast.LENGTH_LONG).show();
                }
            }
        });
