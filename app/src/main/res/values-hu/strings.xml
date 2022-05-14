@@ -28,4 +28,15 @@
     <string name="language_settings">Nyelvi beállítások</string>
     <string name="magyar">Magyar</string>
     <string name="english">Angol</string>
+
+
+
+    <string name="delete_profile">Delete profile</string>
+    <string name="board_description">Description</string>
+    <string name="board_name">Board name</string>
+    <string name="board_owner">Owner</string>
+    <string name="todo_name">Todo Name</string>
+    <string name="todo_deadline">Deadline</string>
+    <string name="todo_description">Description</string>
+    <string name="nickname">Nickname</string>
 </resources>
