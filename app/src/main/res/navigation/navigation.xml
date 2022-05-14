@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/menu_friends"
-        android:name="com.example.todo4u.Fragments.BoardsFragment"
+        android:name="com.example.todo4u.Fragments.MembersFragment"
         android:label="My Friends"/>
 
 </navigation>
