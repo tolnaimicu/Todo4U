@@ -16,6 +16,11 @@ public class Board {
         owner = member;
     }
 
+    public Board()
+    {
+
+    }
+
     public void addTodoToBoard(Todo todo)
     {
         todos.add(todo);

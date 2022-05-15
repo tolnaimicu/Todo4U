@@ -35,4 +35,5 @@
     <string name="todo_deadline">Deadline</string>
     <string name="todo_description">Description</string>
     <string name="nickname">Nickname</string>
+    <string name="log_out">Log out</string>
 </resources>

@@ -30,21 +30,24 @@ public class BoardsFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         context = container.getContext();
         View view = inflater.inflate(R.layout.fragment_boards, container, false);
         boardsList = view.findViewById(R.id.recyclerViewBoard);
-        boardsList.hasFixedSize();
-        boardsList.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        boardsList.setHasFixedSize(true);
+        boardsList.setLayoutManager(new LinearLayoutManager(context));
 
         boardAdapter = new BoardAdapter();
-        boardsList.setAdapter(boardAdapter);
 
         boardAdapter.setOnClickListener(board -> {
             Toast.makeText(context, board.getBoardName(), Toast.LENGTH_SHORT).show();
         });
+
+        boardsList.setAdapter(boardAdapter);
 
         return view;
     }

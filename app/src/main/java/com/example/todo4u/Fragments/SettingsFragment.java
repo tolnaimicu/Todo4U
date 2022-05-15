@@ -37,6 +37,7 @@ public class SettingsFragment extends Fragment {
     private Context context;
     private ToggleButton toggleButton;
     Button deleteAccount;
+    Button logOut;
     FirebaseUser user;
     private DatabaseReference databaseReference = FirebaseDatabase.getInstance("https://todo4u-16517-default-rtdb.europe-west1.firebasedatabase.app/").getReference();
 
@@ -55,6 +56,14 @@ public class SettingsFragment extends Fragment {
         user = FirebaseAuth.getInstance().getCurrentUser();
 
         deleteAccount = view.findViewById(R.id.delete_profile_button);
+        logOut = view.findViewById(R.id.log_out_button);
+
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                signOut(view);
+            }
+        });
 
         deleteAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +72,8 @@ public class SettingsFragment extends Fragment {
 
             }
         });
+
+
 
         uiModeManager = (UiModeManager) context.getSystemService(Context.UI_MODE_SERVICE);
 
@@ -101,6 +112,16 @@ public class SettingsFragment extends Fragment {
                }
            }
        });
+    }
+
+    public void signOut(View w) {
+        AuthUI.getInstance().signOut(context)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        startActivity(new Intent(context, LogInActivity.class));
+                    }
+                });
     }
 
 

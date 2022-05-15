@@ -255,8 +255,6 @@ public class CreateTodoFragment extends Fragment {
                     borrads.add(ds.getValue(Board.class));
                 }
 
-                HashMap<String,Board> value =(HashMap<String, Board>)snapshot.getValue();
-
                 for(int i=0;i<borrads.size();i++)
                 {
                     System.out.println(borrads.get(i).boardName);
