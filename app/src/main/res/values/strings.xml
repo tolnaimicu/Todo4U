@@ -39,4 +39,5 @@
     <string name="myboards">My Boards</string>
     <string name="mytodos">My Todos</string>
     <string name="add_todo">Add Todo</string>
+    <string name="create_to_do">Create To Do</string>
 </resources>

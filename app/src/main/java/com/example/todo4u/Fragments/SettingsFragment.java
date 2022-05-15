@@ -30,6 +30,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Objects;
+
 
 public class SettingsFragment extends Fragment {
 
@@ -60,7 +62,6 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 deleteAccount();
-
             }
         });
 
@@ -84,6 +85,16 @@ public class SettingsFragment extends Fragment {
         return view;
     }
 
+    public void signOut() {
+        AuthUI.getInstance().signOut(this.context)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        startActivity(new Intent(context, LogInActivity.class));
+                    }
+                });
+    }
+
 
 
 
@@ -91,6 +102,7 @@ public class SettingsFragment extends Fragment {
     {
        databaseReference.child("member").child(FirebaseAuth.getInstance()
        .getCurrentUser().getUid()).removeValue();
+        signOut();
 
        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -99,7 +111,7 @@ public class SettingsFragment extends Fragment {
            public void onComplete(@NonNull Task<Void> task) {
                if (task.isSuccessful()) {
                    Log.d("Settings", "User account deleted.");
-                   Toast.makeText(context, "USer successfully deleted", Toast.LENGTH_LONG).show();
+                   Toast.makeText(context, "User successfully deleted", Toast.LENGTH_LONG).show();
                }
            }
        });

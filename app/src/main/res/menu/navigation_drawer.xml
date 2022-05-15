@@ -10,17 +10,25 @@
             android:icon="@drawable/fui_ic_check_circle_black_128dp"
             android:title="@string/my_todos" />
         <item
-            android:id="@+id/menu_Settings"
-            android:icon="@android:drawable/ic_menu_manage"
-            android:title="@string/settings" />
+            android:id="@+id/fragment_create_todo"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="@string/create_to_do" />
         <item
             android:id="@+id/menu_myBoards"
             android:icon="?attr/actionModePasteDrawable"
             android:title="@string/my_boards" />
         <item
+            android:id="@+id/fragment_create_board"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="@string/create_board" />
+        <item
             android:id="@+id/menu_friends"
             android:icon="@android:drawable/ic_menu_my_calendar"
             android:title="@string/friends" />
+        <item
+            android:id="@+id/fragment_settings"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="@string/settings" />
 
     </group>
 
