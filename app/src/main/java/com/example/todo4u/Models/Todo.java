@@ -4,6 +4,7 @@ import com.example.todo4u.Models.Board;
 import com.example.todo4u.Models.Member;
 import com.example.todo4u.Models.Reminder;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -40,8 +41,14 @@ public class Todo {
         this.title = title;
     }
 
-    public GregorianCalendar getDeadline() {
-        return deadline;
+    public String getDeadline() {
+        SimpleDateFormat formattedDate
+                = new SimpleDateFormat("dd-MMM-yyyy");
+
+        String dateFormatted
+                = formattedDate.format(
+                deadline.getTime());
+        return "Deadline: "+dateFormatted;
     }
 
     public void setDeadline(GregorianCalendar deadline) {

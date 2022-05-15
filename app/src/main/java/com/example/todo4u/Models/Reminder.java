@@ -10,4 +10,8 @@ public class Reminder {
     {
         this.type = type;
     }
+
+    public String getType() {
+        return "Reminder:"+type;
+    }
 }

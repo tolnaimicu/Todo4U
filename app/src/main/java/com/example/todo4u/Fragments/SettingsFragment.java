@@ -85,6 +85,8 @@ public class SettingsFragment extends Fragment {
     }
 
 
+
+
     public void deleteAccount()
     {
        databaseReference.child("member").child(FirebaseAuth.getInstance()

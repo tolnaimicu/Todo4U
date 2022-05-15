@@ -4,33 +4,61 @@
     android:id="@+id/todo_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/beige">
+    android:background="@drawable/border">
+
 
     <TextView
         android:id="@+id/todo_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/todo_name"
-        android:textColor="#616161"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/boardName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/board_name"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/todo_title" />
+
+    <TextView
+        android:id="@+id/reminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_member"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/boardName" />
+
 
     <TextView
         android:id="@+id/todo_deadline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/todo_deadline"
-        android:textColor="#616161"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/todo_title" />
+        app:layout_constraintTop_toBottomOf="@id/reminder" />
 
     <TextView
         android:id="@+id/todo_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/todo_description"
-        android:textColor="#616161"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/todo_deadline" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

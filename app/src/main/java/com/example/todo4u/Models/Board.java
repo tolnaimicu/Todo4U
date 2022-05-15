@@ -33,7 +33,7 @@ public class Board {
 
 
     public String getBoardName() {
-        return boardName;
+        return "Board name:"+boardName;
     }
 
     public void setBoardName(String boardName) {

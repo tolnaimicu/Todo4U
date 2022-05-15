@@ -22,14 +22,14 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.ViewHolder> 
     public BoardAdapter(){
         /// TODO: 13.05.2022 get boards out of database
         boards = new ArrayList<>();
-        boards.add(new Board("board1", "description1",
-                new Member("id1","nickname1")));
-        boards.add(new Board("board2", "description2",
-                new Member("id2","nickname2")));
-        boards.add(new Board("board3", "description3",
-                new Member("id3","nickname3")));
-        boards.add(new Board("board4", "description4",
-                new Member("id4","nickname4")));
+        boards.add(new Board("School", "Must do my hand-in for AND",
+                new Member("id1","Kyra Tolnai")));
+        boards.add(new Board("Work", "Let's implement this new feature for our site",
+                new Member("id2","Kyra Tolnai")));
+        boards.add(new Board("SEP Project", "Need to do ETL and documentation",
+                new Member("id3","Kyra Tolnai")));
+        boards.add(new Board("Wellness", "All my tasks to make me feel better",
+                new Member("id4","Kyra Tolnai")));
     }
 
     @NonNull

@@ -35,4 +35,8 @@
     <string name="todo_deadline">Deadline</string>
     <string name="todo_description">Description</string>
     <string name="nickname">Nickname</string>
+    <string name="add_board">Add board</string>
+    <string name="myboards">My Boards</string>
+    <string name="mytodos">My Todos</string>
+    <string name="add_todo">Add Todo</string>
 </resources>

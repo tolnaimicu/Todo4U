@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    public void signOut(View w) {
+    public void signOut() {
         AuthUI.getInstance().signOut(this)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -84,8 +84,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
-        return NavigationUI.onNavDestinationSelected(item, navController) || super.onOptionsItemSelected(item);
-    }
+        switch (item.getItemId()){
+            case R.id.action_logout:
+                signOut();
+                return true;
+            default:
+                return NavigationUI.onNavDestinationSelected(item, navController) || super.onOptionsItemSelected(item);
+    }}
 
     private void initViews() {
         drawerLayout = findViewById(R.id.drawer_layout);
