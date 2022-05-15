@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    public void signOut(View w) {
+    public void signOut() {
         AuthUI.getInstance().signOut(this)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
