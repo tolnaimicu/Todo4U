@@ -39,15 +39,20 @@ public class BoardsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_boards, container, false);
         boardsList = view.findViewById(R.id.recyclerViewBoard);
         boardsList.setHasFixedSize(true);
-        boardsList.setLayoutManager(new LinearLayoutManager(context));
-
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        boardsList.setLayoutManager(linearLayoutManager);
         boardAdapter = new BoardAdapter();
+        boardAdapter.getBoardData();
+
 
         boardAdapter.setOnClickListener(board -> {
             Toast.makeText(context, board.getBoardName(), Toast.LENGTH_SHORT).show();
         });
 
+
         boardsList.setAdapter(boardAdapter);
+
+
 
         return view;
     }

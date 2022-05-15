@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.todo4u.Adapters.BoardAdapter;
 import com.example.todo4u.Adapters.MemberAdapter;
 import com.example.todo4u.R;
 
@@ -41,11 +40,14 @@ public class MembersFragment extends Fragment {
         membersList.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
         memberAdapter = new MemberAdapter();
-        membersList.setAdapter(memberAdapter);
 
-        memberAdapter.setOnClickListener(board -> {
-            Toast.makeText(context, board.getNickName(), Toast.LENGTH_SHORT).show();
+        memberAdapter.getMemberData();
+
+        memberAdapter.setOnClickListener(v -> {
+            Toast.makeText(context, v, Toast.LENGTH_SHORT).show();
         });
+
+        membersList.setAdapter(memberAdapter);
 
         return view;
     }

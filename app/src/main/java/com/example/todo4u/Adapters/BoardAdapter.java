@@ -42,13 +42,13 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.ViewHolder> 
 
         */
         boards2 = new ArrayList<Board>();
-        getBoardData();
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        context = parent.getContext();
         View view = inflater.inflate(R.layout.fragment_board_item, parent, false);
         return new ViewHolder(view);
 

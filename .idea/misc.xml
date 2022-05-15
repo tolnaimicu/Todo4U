@@ -4,6 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Kira/AndroidStudioProjects/Todo4U/app/src/main/res/layout/activity_create_todo.xml" value="0.4" />
+        <entry key="..\:/Users/Kira/AndroidStudioProjects/Todo4U/app/src/main/res/layout/fragment_board_item.xml" value="0.5285935085007728" />
+        <entry key="..\:/Users/Kira/AndroidStudioProjects/Todo4U/app/src/main/res/layout/fragment_boards.xml" value="0.1" />
+        <entry key="..\:/Users/Kira/AndroidStudioProjects/Todo4U/app/src/main/res/layout/fragment_member_item.xml" value="0.18177083333333333" />
+        <entry key="..\:/Users/Kira/AndroidStudioProjects/Todo4U/app/src/main/res/layout/fragment_members.xml" value="0.18177083333333333" />
+        <entry key="..\:/Users/Kira/AndroidStudioProjects/Todo4U/app/src/main/res/layout/list_item.xml" value="0.4" />
         <entry key="..\:/Users/Tolnai/AndroidStudioProjects/Todo4U/app/src/main/res/layout/activity_dashboard.xml" value="0.4" />
         <entry key="..\:/Users/Tolnai/AndroidStudioProjects/Todo4U/app/src/main/res/layout/activity_dashvoard.xml" value="0.1" />
         <entry key="..\:/Users/Tolnai/AndroidStudioProjects/Todo4U/app/src/main/res/layout/activity_login.xml" value="0.1" />
