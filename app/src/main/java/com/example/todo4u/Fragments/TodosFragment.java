@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.todo4u.Adapters.TodoAdapter;
@@ -20,6 +21,7 @@ public class TodosFragment extends Fragment {
     RecyclerView todosList;
     TodoAdapter todoAdapter;
     Context context;
+    Button buttonDone;
 
     public TodosFragment() {
         // Required empty public constructor
@@ -41,6 +43,10 @@ public class TodosFragment extends Fragment {
 
         todoAdapter = new TodoAdapter();
         todosList.setAdapter(todoAdapter);
+
+        buttonDone = (Button)view.findViewById(R.id.todoDone);
+
+
 
         todoAdapter.setOnClickListener(todo -> {
             Toast.makeText(context, todo.getTitle(), Toast.LENGTH_SHORT).show();

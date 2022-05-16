@@ -8,6 +8,8 @@ public class Board {
     public ArrayList<Todo> todos;
     public String boardName;
 
+    public Board(){}
+
     public Board(String boardName, String boardDescription, Member member)
     {
         this.boardDescription=boardDescription;
@@ -25,9 +27,9 @@ public class Board {
         return todos;
     }
 
-    public void deleteTodo(int todoId)
+    public void deleteTodo(String name)
     {
-        todos.remove(todoId);
+        todos.remove(name);
     }
 
 

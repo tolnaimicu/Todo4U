@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.example.todo4u.Adapters.BoardAdapter;
@@ -26,7 +28,6 @@ public class BoardsFragment extends Fragment {
     BoardAdapter boardAdapter;
     Context context;
     Button button;
-
     public BoardsFragment() {
         // Required empty public constructor
     }
@@ -49,7 +50,7 @@ public class BoardsFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Todo Bianca please fix this :D
+                Navigation.findNavController(view).navigate(R.id.container);
 
             }
         });
@@ -62,7 +63,10 @@ public class BoardsFragment extends Fragment {
 
         boardAdapter.setOnClickListener(board -> {
             Toast.makeText(context, board.getBoardName(), Toast.LENGTH_SHORT).show();
-        });
+
+                });
+
+
 
         return view;
     }

@@ -33,7 +33,7 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.ViewHolder> {
                 new Member("id", "Kyra Tolnai")), new Member("id", "Kyra Tolnai")));
 
         todos.add(new Todo( "Do assignment for ADS", new GregorianCalendar(2022,5,20), "Document the assignment",
-                new Reminder("Day after tomorrow"), new Board("School", "des",
+                new Reminder("9 pm"), new Board("School", "des",
                 new Member("id", "Kyra Tolnai")), new Member("id", "Kyra Tolnai")));
     }
 
@@ -84,5 +84,14 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.ViewHolder> {
 
     public interface OnClickListener {
         void onClick(Todo board);
+    }
+
+    public void deleteTodo(String name)
+    {
+        for(int i=0;i<todos.size();i++)
+        {
+            if(todos.get(i).getTitle().equals(name))
+                todos.remove(i);
+        }
     }
 }
