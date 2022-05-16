@@ -4,7 +4,7 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">#531D2F</item>
         <item name="colorPrimaryVariant">@color/dark_pink</item>
-        <item name="colorOnPrimary">@color/beige</item>
+        <item name="colorOnPrimary">@color/dark_red</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/beige</item>
         <item name="colorSecondaryVariant">@color/dark_brown</item>
