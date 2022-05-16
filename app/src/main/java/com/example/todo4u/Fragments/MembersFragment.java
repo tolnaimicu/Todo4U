@@ -49,6 +49,7 @@ public class MembersFragment extends Fragment {
 
         membersList.setAdapter(memberAdapter);
 
+
         return view;
     }
 }

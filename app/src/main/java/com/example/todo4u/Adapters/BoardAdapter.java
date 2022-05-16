@@ -66,6 +66,7 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.ViewHolder> 
                     boards2.add(ds.getValue(Board.class));
                 }
 
+                notifyDataSetChanged();
                 for (int i=0; i<boards2.size(); i++)
                 {
                     System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!"+boards2.get(i).boardName);
@@ -109,6 +110,8 @@ public class BoardAdapter extends RecyclerView.Adapter<BoardAdapter.ViewHolder> 
             this.boardOwner = itemView.findViewById(R.id.board_owner);
             this.boardDescription = itemView.findViewById(R.id.board_description);
             itemView.setOnClickListener(v -> listener.onClick(boards2.get(getBindingAdapterPosition())));
+
+
         }
     }
 

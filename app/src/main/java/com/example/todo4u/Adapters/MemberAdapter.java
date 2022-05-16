@@ -83,6 +83,8 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
                 members
                         = value.values().toArray(new String[0]);
 
+                notifyDataSetChanged();
+
                 for (int i=0; i<members.length; i++)
                 {
                     System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!"+members[i]);
