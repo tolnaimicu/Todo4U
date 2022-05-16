@@ -35,7 +35,7 @@ public class Board {
 
 
     public String getBoardName() {
-        return "Board name:"+boardName;
+        return boardName;
     }
 
     public void setBoardName(String boardName) {

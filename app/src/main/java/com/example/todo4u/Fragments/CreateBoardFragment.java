@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -79,6 +80,7 @@ public class CreateBoardFragment extends Fragment {
                 })
                         .addOnFailureListener(e -> Log.w(TAG, "Cannot add board to the database"));
 
+                NavHostFragment.findNavController(CreateBoardFragment.this).navigate(R.id.menu_myBoards);
             }
         });
         return view;

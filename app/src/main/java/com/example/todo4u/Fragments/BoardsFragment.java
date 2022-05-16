@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -50,7 +51,7 @@ public class BoardsFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.container);
+                NavHostFragment.findNavController(BoardsFragment.this).navigate(R.id.fragment_create_board);
 
             }
         });
@@ -59,7 +60,9 @@ public class BoardsFragment extends Fragment {
         boardsList.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
         boardAdapter = new BoardAdapter();
+        boardAdapter.getBoardData();
         boardsList.setAdapter(boardAdapter);
+
 
         boardAdapter.setOnClickListener(board -> {
             Toast.makeText(context, board.getBoardName(), Toast.LENGTH_SHORT).show();

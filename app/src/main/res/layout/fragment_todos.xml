@@ -19,13 +19,15 @@
         android:layout_margin="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recyclerViewTodos"/>
+        android:id="@+id/recyclerViewTodos"
+        android:visibility="visible"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/add_todo"
         android:layout_marginHorizontal="80dp"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="40dp"
+        android:id="@+id/addTodo"/>
 
 </LinearLayout>

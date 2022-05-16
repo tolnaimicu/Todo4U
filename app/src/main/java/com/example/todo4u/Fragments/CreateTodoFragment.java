@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -62,7 +63,7 @@ public class CreateTodoFragment extends Fragment {
     AutoCompleteTextView autoCompleteTextViewMembers;
     ArrayAdapter<String> adapterItemsMembers;
 
-    String[] reminders = {"1 week before", "1 day before", "1 "};
+    String[] reminders = {"1 week before", "1 day before", "1 hour before "};
     AutoCompleteTextView autoCompleteTextViewReminder;
     ArrayAdapter<String> adapterItemsReminders;
 
@@ -106,26 +107,24 @@ public class CreateTodoFragment extends Fragment {
         todoTitle = view.findViewById(R.id.todo_title);
         todoDesc = view.findViewById(R.id.todo_description);
 
-        createTodoBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               GregorianCalendar date =  new GregorianCalendar(year, month, day, hour, minute, 0);
+        createTodoBtn.setOnClickListener(view1 -> {
+               String deadline = "Deadline: "+hour+":"+minute+" "+day+"/"+month+"/"+year;
                String title = todoTitle.getText().toString();
-               String description = todoDesc.getText().toString();
+               String description = "Description: "+todoDesc.getText().toString();
                int todoId;
 
 
                //Need to get the board from the adapter with the help of the boardTitle
                 //Need to get member through adapter with the memberName
 
-               Todo todo = new Todo(title,date,description,new Reminder(selectedReminder),selectedBoardB, new Member(selectedMemberID,selectedMember));
+               Todo todo = new Todo(title,deadline,description,new Reminder(selectedReminder),selectedBoardB, new Member(selectedMemberID,selectedMember));
 
                databaseReference.child("todos").child(selectedMemberID).child(title).setValue(todo).addOnSuccessListener(aVoid -> {
                    Log.d("Todo", "Successfully added to the database ");
                }).addOnFailureListener(e -> Log.w("Todo", "Cannot add board to the database"));
 
 
-            }
+            NavHostFragment.findNavController(this).navigate(R.id.menu_myTodos);
         });
 
         //Stuff for boards

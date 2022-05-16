@@ -10,13 +10,13 @@ import java.util.GregorianCalendar;
 
 public class Todo {
     public String title;
-    public GregorianCalendar deadline;
+    public String deadline;
     public String description;
     public Reminder reminder;
     public Board board;
     public Member member;
 
-    public Todo( String title, GregorianCalendar deadline, String description, Reminder reminder, Board board, Member member)
+    public Todo( String title, String deadline, String description, Reminder reminder, Board board, Member member)
     {
         this.title=title;
         this.deadline=deadline;
@@ -42,16 +42,11 @@ public class Todo {
     }
 
     public String getDeadline() {
-        SimpleDateFormat formattedDate
-                = new SimpleDateFormat("dd-MMM-yyyy");
 
-        String dateFormatted
-                = formattedDate.format(
-                deadline.getTime());
-        return "Deadline: "+dateFormatted;
+        return deadline;
     }
 
-    public void setDeadline(GregorianCalendar deadline) {
+    public void setDeadline(String deadline) {
         this.deadline = deadline;
     }
 

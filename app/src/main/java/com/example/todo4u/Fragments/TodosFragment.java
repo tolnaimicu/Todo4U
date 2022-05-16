@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,7 +22,7 @@ public class TodosFragment extends Fragment {
     RecyclerView todosList;
     TodoAdapter todoAdapter;
     Context context;
-    Button buttonDone;
+    Button addTodo;
 
     public TodosFragment() {
         // Required empty public constructor
@@ -37,20 +38,26 @@ public class TodosFragment extends Fragment {
                              Bundle savedInstanceState) {
         context = container.getContext();
         View view = inflater.inflate(R.layout.fragment_todos, container, false);
+
         todosList = view.findViewById(R.id.recyclerViewTodos);
         todosList.hasFixedSize();
         todosList.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
         todoAdapter = new TodoAdapter();
+        todoAdapter.getTodoData();
         todosList.setAdapter(todoAdapter);
 
-        buttonDone = (Button)view.findViewById(R.id.todoDone);
 
+        addTodo =  view.findViewById(R.id.addTodo);
 
-
-        todoAdapter.setOnClickListener(todo -> {
-            Toast.makeText(context, todo.getTitle(), Toast.LENGTH_SHORT).show();
+        addTodo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(TodosFragment.this).navigate(R.id.fragment_create_todo);
+            }
         });
+
+
 
         return view;
     }

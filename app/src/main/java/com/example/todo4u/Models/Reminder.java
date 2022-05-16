@@ -6,12 +6,14 @@ public class Reminder {
 
     public String type;
 
+    public Reminder(){}
+
     public Reminder(String type)
     {
         this.type = type;
     }
 
     public String getType() {
-        return "Reminder:"+type;
+        return type;
     }
 }
