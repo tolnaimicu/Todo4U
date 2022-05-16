@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigation.xml"
-    app:startDestination="@+id/menu_myTodos">
+    app:startDestination="@+id/fragment_welcome">
 
     <fragment
         android:id="@+id/fragment_create_todo"
@@ -39,5 +39,10 @@
         android:id="@+id/menu_friends"
         android:name="com.example.todo4u.Fragments.MembersFragment"
         android:label="My Friends"/>
+
+    <fragment
+        android:id="@+id/fragment_welcome"
+        android:name="com.example.todo4u.Fragments.WelcomeFragment"
+        android:label="@string/welcome_back"/>
 
 </navigation>

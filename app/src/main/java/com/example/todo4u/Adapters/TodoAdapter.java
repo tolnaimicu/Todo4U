@@ -35,11 +35,6 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.ViewHolder> {
         todos.add(new Todo( "Do assignment for ADS", new GregorianCalendar(2022,5,20), "Document the assignment",
                 new Reminder("Day after tomorrow"), new Board("School", "des",
                 new Member("id", "Kyra Tolnai")), new Member("id", "Kyra Tolnai")));
-
-
-
-
-
     }
 
     @NonNull

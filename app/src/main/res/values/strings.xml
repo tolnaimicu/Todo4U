@@ -40,4 +40,6 @@
     <string name="mytodos">My Todos</string>
     <string name="add_todo">Add Todo</string>
     <string name="create_to_do">Create To Do</string>
+    <string name="welcome_back">Welcome back!</string>
+    <string name="see_your_todos_or_add_a_new_one">See your todos or add a new one</string>
 </resources>

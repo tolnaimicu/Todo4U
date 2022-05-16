@@ -4,7 +4,7 @@
     android:id="@+id/member_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/beige">
+    android:background="@drawable/border">
 
     <TextView
         android:id="@+id/nick_name"
@@ -12,6 +12,8 @@
         android:layout_height="wrap_content"
         android:text="@string/nickname"
         android:textColor="#616161"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

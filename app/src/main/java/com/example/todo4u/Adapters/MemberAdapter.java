@@ -21,11 +21,9 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
 
     public MemberAdapter(){
         members = new ArrayList<>();
-        members.add(new Member("hello","hello"));
-        members.add(new Member("hello","hello"));
-        members.add(new Member("hello","hello"));
-        members.add(new Member("hello","hello"));
-        members.add(new Member("hello","hello"));
+        members.add(new Member("hello","Maria-Bianca Militaru"));
+        members.add(new Member("hello","Kyra Tolnai"));
+        members.add(new Member("hello","Milan Tolnai"));
     }
 
     public void setOnClickListener(MemberAdapter.OnClickListener listener){
