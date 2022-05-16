@@ -41,11 +41,11 @@ public class MembersFragment extends Fragment {
         membersList.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
         memberAdapter = new MemberAdapter();
+
+        memberAdapter.getMemberData();
         membersList.setAdapter(memberAdapter);
 
-        memberAdapter.setOnClickListener(board -> {
-            Toast.makeText(context, board.getNickName(), Toast.LENGTH_SHORT).show();
-        });
+
 
         return view;
     }
