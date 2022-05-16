@@ -32,4 +32,4 @@ As a user I would like to delete a board, in order to remove it from my account.
 As a user I would like to receive notifications, in order to be reminded about a task. -> NOT DONE
 
 
-Link for youtube video: 
+Link for youtube video:  https://youtu.be/myByvbpC3cQ
